@@ -4,6 +4,47 @@ Struct mode_manager
     Uint32_t nxt_mode;
     Std:mutex m;
     
+    class enum mode_states
+    {
+        OFF;
+        STANDBY;
+        READY;
+        ACTION1;
+        ACTION2;
+        ACTIONN;
+        RESET;
+    };
+
+    class enum mode_status
+    {
+        SUCCESS;
+        FAIL;
+    }
+
+    mode_status modeManager(input1 input2 inputn)
+    {
+        Switch( input1 )
+        {
+             case STANDBY:
+             break;
+             
+             case READY:
+             break;
+
+             case ACTION1:
+             break;
+             
+             case ACTION2:
+             break;
+
+             default:
+             break;
+
+        }
+        
+    
+    }
+    
     
 
 
