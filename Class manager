@@ -1,5 +1,10 @@
 Struct mode_manager
 {
+    uint32_t curr_mode;
+    Uint32_t nxt_mode;
+    Std:mutex m;
     
+    
+
 
 }
