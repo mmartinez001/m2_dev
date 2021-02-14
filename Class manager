@@ -21,11 +21,12 @@ Struct mode_manager
         FAIL;
     }
 
-    mode_status modeManager(input1 input2 inputn)
+    mode_status modeManager(mode_states input1)
     {
         Switch( input1 )
         {
              case STANDBY:
+             
              break;
              
              case READY:
@@ -40,6 +41,23 @@ Struct mode_manager
              default:
              break;
 
+        }
+        
+        mode_status standby_mode()
+        {
+             mode_status reset_stat=reset();
+             mode_status bit_stat=builtin_test();
+             if( reset_stat != SUCCESS)
+             {
+                //power_cycle?
+             }
+             else if(bit_stat != SUCCESS)
+             {
+               //report back BIT results?
+             }
+             return SUCCESS;
+             
+        
         }
         
     
